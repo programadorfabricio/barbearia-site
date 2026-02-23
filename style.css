@@ -1,0 +1,252 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* BODY */
+body{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#fff;
+  background-image:url('imagens/fundo-barbearia.jpg');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+/* NAVBAR */
+nav{
+  background:#000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+}
+
+nav h2{
+  font-size:1.4rem;
+}
+
+nav a{
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:0.95rem;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#00ff88;
+}
+
+/* MAIN */
+main{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.main-text{
+  flex:1;
+  min-width:300px;
+}
+
+.main-text h1{
+  font-size:2.5rem;
+  margin-bottom:20px;
+}
+
+.main-text p{
+  color:#ccc;
+  margin-bottom:30px;
+  font-size:1.1rem;
+}
+
+/* BOTÃO */
+.btn-contrate{
+  background:#fff;
+  color:#000;
+  padding:14px 28px;
+  border:none;
+  border-radius:6px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn-contrate:hover{
+  background:#00ff88;
+}
+
+/* IMAGEM */
+.main-image{
+  flex:1;
+  min-width:280px;
+  text-align:center;
+}
+
+.main-image img{
+  width:100%;
+  max-width:420px;
+  border-radius:12px;
+  box-shadow:0 0 25px rgba(0,0,0,0.7);
+}
+
+/* ICONES */
+.social-icons{
+  margin-bottom:20px;
+}
+
+.social-icons a{
+  color:#fff;
+  margin-right:12px;
+  font-size:1.3rem;
+  transition:.3s;
+}
+
+.social-icons a:hover{
+  color:#00ff88;
+}
+
+/* INTRO GALERIA */
+.gallery-intro{
+  text-align:center;
+  margin-top:40px;
+  color:#ccc;
+  padding:0 20px;
+}
+
+/* GALERIA */
+.gallery{
+  max-width:1200px;
+  margin:60px auto;
+  padding:0 20px;
+}
+
+.gallery h2{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
+}
+
+.gallery-grid img{
+  width:100%;
+  border-radius:10px;
+  transition:.3s;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.05);
+}
+
+/* DEPOIMENTOS */
+.depoimentos-carousel{
+  background:#000;
+  padding:70px 20px;
+  text-align:center;
+}
+
+.depoimentos-carousel h2{
+  margin-bottom:30px;
+}
+
+.carousel-container{
+  max-width:700px;
+  margin:auto;
+  position:relative;
+}
+
+.depoimento{
+  display:none;
+  background:#111;
+  padding:30px;
+  border-radius:10px;
+  color:#ccc;
+  font-style:italic;
+  min-height:140px;
+}
+
+.depoimento span{
+  display:block;
+  margin-top:15px;
+  color:#00ff88;
+  font-weight:bold;
+  font-style:normal;
+}
+
+.depoimento.ativo{
+  display:block;
+}
+
+/* BOTÕES CARROSSEL */
+.carousel-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:none;
+  border:none;
+  color:#00ff88;
+  font-size:2rem;
+  cursor:pointer;
+}
+
+.prev{ left:-40px; }
+.next{ right:-40px; }
+
+/* WHATSAPP */
+.btn-whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  z-index:999;
+}
+
+.btn-whatsapp img{
+  width:100%;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  text-align:center;
+  padding:50px 20px;
+}
+
+footer h3{
+  color:#00ff88;
+  margin-bottom:10px;
+}
+
+footer p{
+  color:#aaa;
+  margin:8px 0;
+}
+
+footer hr{
+  margin:25px auto;
+  width:80%;
+  border-color:#333;
+}
+
+.depoimento{
+  opacity:0;
+  transition:.5s;
+  position:absolute;
+}
+
+.depoimento.ativo{
+  opacity:1;
+  position:relative;
+}
